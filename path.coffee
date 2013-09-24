@@ -140,7 +140,7 @@ $.fn.path = (opts) ->
 	opts = $.extend {}, defaultConfig, opts
 
 	# 没有按钮 直接返回
-	if !opts.menu
+	if not opts.menu
 		return @
 
 	pathItem = $(@)
@@ -164,9 +164,8 @@ $.fn.path = (opts) ->
 		speed = opts.speed
 		len = menus.length
 
-		if radian != 360
-			len = len - 1
-
+		len = len - 1 if radian isnt 360
+		
 		menus.each (i)->
 			item = $(@)
 			# 单个元素弧度算法 索引 * 传入的弧度 * 元素的个数 * 半径
@@ -182,7 +181,7 @@ $.fn.path = (opts) ->
 			# 旋转
 			item.rotate()
 
-			if item.is(':hidden')
+			if item.is ':hidden'
 				item.show().animate(
 					top: [y, easArr[rdNum]]
 					left: [x, easArr[rdNum]]
@@ -242,7 +241,7 @@ $.fn.rotate = (opts) ->
 				degrees += opts.degrees
 
 		# 旋转360后恢复为0
-		if currentDegree % 360 == 0
+		if currentDegree % 360 is 0
 			currentDegree = 0;
 			degrees = (currentDegree + degrees) % 360;
 
