@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,
+li{
+	list-style: none;
+}
+.wrap,
+.wrap div{
+	width: 100px;
+	height: 100px;
+}
+.wrap{  	
+	position: relative;
+	margin: 10% auto;
+}
+.wrap div{
+	border-radius: 100px;
+	background: #f60;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
+}
+
+.wrap span{
+	display: none;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	line-height: 30px;
+	background: #f90;
+	color: #fff;
+	text-align: center;
+}
